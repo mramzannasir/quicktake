@@ -60,7 +60,7 @@ const Navbar = () => {
 									className={`rounded-r-xl  px-4 py-2 lg:text-[14px] ${
 										open ? "text-white" : "text-[#242424]"
 									} text-xl font-medium transition-all duration-1000  lg:p-0   lg:w-auto lg:bg-inherit lg:text-sm lg:font-medium`}
-									href={"/"}>
+									href={"/signup"}>
 									Sign Up
 								</Link>
 								<Link
@@ -88,7 +88,7 @@ const Navbar = () => {
 									className={`rounded-r-xl  px-4 py-2 lg:text-[14px] ${
 										open ? "text-white" : "text-red"
 									} text-xl font-medium transition-all duration-1000 lg:pl-6  lg:w-auto lg:bg-inherit lg:text-sm lg:font-medium`}
-									href={"/"}>
+									href={"/login"}>
 									Login
 								</Link>
 							</div>
