@@ -94,7 +94,7 @@ const Home = () => {
 									<button
 										disabled={!inputVal}
 										onClick={(()=>router.push('/quickTake'))}
-										className=" flex h-[55px] w-full items-center justify-center rounded-lg bg-red text-[13px] text-white sm:h-[57px] sm:text-base">
+										className=" flex h-[45px] w-full items-center justify-center rounded-lg bg-red text-[13px] text-white sm:h-[57px] sm:text-base">
 										Quick Take
 									</button>
 								</div>
