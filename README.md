@@ -1,0 +1,2 @@
+# quicktake
+ Nextjs + Tailwindcss
