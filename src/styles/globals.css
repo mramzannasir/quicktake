@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    @apply w-full flex flex-col justify-center items-center;
+}
+
+.contain {
+    @apply w-[96%] md:w-[95%] lg:w-[90%] xl:w-[90%] 2xl:max-w-[1440px] flex;
+}
+
+.heading {
+    @apply text-[38px] md:text-[45px] lg:text-[50px] xl:text-[52px] leading-[3rem] md:leading-[3.5rem] font-bold;
+}
+
+.titleMain {
+    @apply text-[18px] md:text-[24px];
+}
+
+.des {
+    @apply text-sm  md:text-base;
+}
+
+.a {
+    background: #FFFFFF;
+    box-shadow: 0px 40px 150px rgba(62, 103, 164, 0.281);
+    border-radius: 8px;
+}
+
+.b {
+    background: #F2F5F9;
+    border: 1px solid rgba(65, 96, 136, 0.08);
+    border-radius: 8px;
 }
