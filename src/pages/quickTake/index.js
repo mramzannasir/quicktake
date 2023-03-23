@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
-import Home from "./Home";
 import React from "react";
 import Footer from "@/components/Footer";
+import Layout from "./Layout";
 
-const Layout = () => {
+const index = () => {
 	return (
 		<>
 			{/* Navbar */}
@@ -11,13 +11,13 @@ const Layout = () => {
 				<Navbar />
 			</div>
 			<div className="w-full">
-				<Home />
+				<Layout />
 			</div>
-			<div className="mt-[4rem] w-full border-t-[1px]  border-black  border-opacity-5 pt-2">
+			<div className="w-full mt-[7rem]  border-t-[1px] border-black border-opacity-5 pt-2  ">
 				<Footer />
 			</div>
 		</>
 	);
 };
 
-export default Layout;
+export default index;

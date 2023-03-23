@@ -2,17 +2,28 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { BsChevronUp } from "react-icons/bs";
 import { motion } from "framer-motion";
+import  {useRouter}  from "next/router";
+
 const Home = () => {
 	const [show, setShow] = useState();
 	const [data, setData] = useState("Video");
-	const handleVideo = () => {
+	const [go, setGo] = useState(false);
+	const [input, setInput] = useState("");
+	const [inputVal, setInputVal] =useState("")
+	const router = useRouter();
+	const handleVideo = () => { 
 		setData("Video");
 		setShow(!show);
 	};
 	const handlePodcast = () => {
 		setData("Podcast");
 		setShow(!show);
+		setGo(true);
 	};
+	function handleInputChange(event) {
+		setInputVal(event.target.value);
+		setInput(true);
+	}
 	return (
 		<>
 			<div className="wrapper text-black">
@@ -72,13 +83,18 @@ const Home = () => {
 										)}
 									</div>
 									<input
+										value={inputVal}
+										onChange={handleInputChange}
 										type="text"
 										className="h-[45px] w-[100%] rounded-lg border-none bg-transparent  pl-2 outline-none placeholder:text-[13px] placeholder:text-[#416088] sm:h-[55px] placeholder:sm:text-base"
 										placeholder="Paste any video URL here"
 									/>
 								</div>
 								<div className="w-[30%] md:w-[18%]">
-									<button className=" flex h-[55px] w-full items-center justify-center rounded-lg bg-red text-[13px] text-white sm:h-[57px] sm:text-base">
+									<button
+										disabled={!inputVal}
+										onClick={(()=>router.push('/quickTake'))}
+										className=" flex h-[55px] w-full items-center justify-center rounded-lg bg-red text-[13px] text-white sm:h-[57px] sm:text-base">
 										Quick Take
 									</button>
 								</div>

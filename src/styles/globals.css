@@ -38,3 +38,7 @@ body {
     border: 1px solid rgba(65, 96, 136, 0.08);
     border-radius: 8px;
 }
+.c{
+    border: 1px solid rgba(65, 96, 136, 0.2);
+border-radius: 8px;
+}
